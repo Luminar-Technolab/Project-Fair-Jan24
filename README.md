@@ -508,6 +508,10 @@
             - Axios library : npm i axios
             - Create folder for services
         - To create the build for production of your react app use command : npm run build
+        - Data Sharing between components in REACT
+            - State Lifting : lifting a state to its parent, such that it can share between its child, using props
+            - REDUX : To avoid props drilling while shairing the data across diffrenet compoenets, avoid props drilling
+            - Context API : use context to share data between different compoenents,  avoid props drilling
 
 
         ----------------------------------------
@@ -555,6 +559,18 @@
                 - its output returns extraReducer, where we can add cases using builder class
             - ExtraReducer : it can resolve a promise in different cases, we can add cases using Builder Object
 
+        ---------------------------------------------------------------
+                CONTEXT API - DATA SHARING TECHNIQUE IN REACT
+        ---------------------------------------------------------------
+
+        1. providing a centralized way to manage state across components
+        2. share specific information (like state or functions) with multiple components, without prop drilling.
+        3. Steps are
+            - Creating a Context : creating a context using the 'createContext()' method
+            - Providing the Context : use 'Provider' of context, so that it helps to provide data to components
+            - Consuming the Context : to use / access data shared using context API use 'useContext()' hook
+        4. children props used to access all the children component of a parent, {children}
+
         ------------------------------------------------------
                 MONGODB - DATABASE
         ------------------------------------------------------
@@ -590,6 +606,7 @@
             - $in/$nin : used to check documenets are included or not
             - $exists
             - $and/$or
+            - $regex : used to check a pattern available in a document
             - $expr : used to compare different feilds in a document
             - To update documents : use updateOne / updateMany ()
                 - $set to assign values, 
@@ -715,6 +732,7 @@
                     - import jsonwebtoken
                     - create middlewware function for define logic to verify token
                     - export middleware
+            - express.static() : used to make a file/folder from node server available to other application
 
             ------------------------------------------------------
                     MONGOOSE - OBJECT DATA MODEL (ODM) FOR NODE JS
